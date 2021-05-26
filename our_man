@@ -1,0 +1,29 @@
+.\" Manpage for the final class project of BI290.
+.\" Group 7
+.TH man 3 "13 June 2021" "1.0" "our_man man page"
+.SH NAME
+our_man \- to implement some string based algorithms \- seems to be silly but that is really the name of our manual
+.SH SYNOPSIS
+our_man
+.SH DESCRIPTION
+This is a C program which contains simple yet useful functions to implement string matching and compression. For string matching, we can find out whether some pattern strings exist in the given DNA sequence. For stirng compression, we adopt string hashing algorithm and Huffman Tree to convert the DNA sequence into different forms.
+.SH Usage
+First please call make to generate the executable file and then run ./bin/match_compr.static to start program.
+.TP
+.B m
+Match the DNA sequence with pattern strings.
+.TP
+.B p l r
+Check whether the substring (from location l to r) is palindrome.
+.TP
+.B c pos ch
+Modify the nucleotide at location pos to ch.
+.TP
+.B q
+Quit
+.SH SEE ALSO
+mingetty(8)
+.SH BUGS
+None!
+.SH AUTHOR
+pjz2001 (pjz2001@163.com)
