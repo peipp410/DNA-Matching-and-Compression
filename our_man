@@ -19,6 +19,9 @@ Check whether the substring (from location l to r) is palindrome.
 .B c pos ch
 Modify the nucleotide at location pos to ch.
 .TP
+.B h
+Print the huffman code.
+.TP
 .B q
 Quit
 .SH SEE ALSO

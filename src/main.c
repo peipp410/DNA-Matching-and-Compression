@@ -3,7 +3,10 @@
 char seq[N];
 int main(){
     FILE* f;
-    f=fopen("NM000207.fasta", "r"); //读入fasta
+    char filename[100];
+    scanf("%s",filename);
+    getchar();
+    f=fopen(filename, "r"); //读入fasta
     while(fgets(seq, sizeof(seq), f)){
         if (seq[0]!='>') break;
     }
@@ -14,6 +17,7 @@ int main(){
         if (c=='q') break;
         else if (c=='m') trie(seq);
         else if (c=='p' || c=='c') str_hash(seq,c);
+        else if (c=='h') huffman(seq);
     }
     return 0;
 }

@@ -13,8 +13,14 @@ struct node{
 typedef struct node TNode;
 #define ULL unsigned long long
 #define N 100005
+typedef struct {
+    int weight;
+    int parent, left, right;
+}HTNode, *HuffmanTree;
+typedef char ** HuffmanCode;
 
 void trie(char* seq);
 void str_hash(char* s,char process);
+void huffman(char* seq);
 
 #endif //CODE_PROJ_H
