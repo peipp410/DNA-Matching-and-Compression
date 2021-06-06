@@ -4,6 +4,8 @@ char seq[N];
 int main(){
     FILE* f;
     char filename[100];
+    printf("This is the implement of some algorithms of string matching and compression.\nTo get more information, please turn to our manual.\n");
+    printf("Please input a fasta filename:");
     scanf("%s",filename);
     getchar();
     f=fopen(filename, "r"); //读入fasta
@@ -12,6 +14,7 @@ int main(){
     }
     fclose(f);
     char c;
+    printf("Please input a command (press q to quit):\n");
     while(scanf("%c",&c)){
         getchar();
         if (c=='q') break;
