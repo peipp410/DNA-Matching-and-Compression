@@ -52,15 +52,19 @@ void trie_get_fail(TNode* p){
 }
 
 void trie_query(char* s, TNode* p){
+    FILE* f;
+    f=fopen("output.txt", "a");
     int now=0;
     for (int i=0;s[i];i++){
         now=p->tr[now][s[i]-'A'];
         for (int j=now;j && p->is_end[j]!=-1;j=p->fail[j]){
             if (p->is_end[j]!=0){
                 printf("Found pattern string NO.%d in index %d\n",p->is_end[j],i+1);
+                fprintf(f,"Found pattern string NO.%d in index %d\n",p->is_end[j],i+1);
             }
         }
     }
+    fclose(f);
 }
 
 void trie(char* seq){
@@ -109,6 +113,8 @@ ULL sum(int x,int y){
 }
 
 void str_hash(char* s,char process){
+    FILE* f;
+    f=fopen("output.txt", "a");
     hash[0]=1;
     for (int i=1;i<=N;i++){
         hash[i]=hash[i-1]*13;
@@ -126,18 +132,26 @@ void str_hash(char* s,char process){
         getchar();
         ULL s1=(sum(r,0)-sum(l-1,0))*hash[len-r];
         ULL s2=(sum(len-l+1,1)-sum(len-r,1))*hash[l-1];
-        if (s1==s2) printf("is palindrome\n");
-        else printf("not palindrome\n");
+        if (s1==s2) {
+            printf("is palindrome\n");
+            fprintf(f,"The %dth to %dth substring is palindrome.\n", l, r);
+        }
+        else {
+            printf("not palindrome\n");
+            fprintf(f,"The %dth to %dth substring is not palindrome.\n", l, r);
+        }
     }
     else if (process=='c'){
         scanf("%d %c",&pos,&ch);
         getchar();
+        fprintf(f,"The %dth char is changed to %c.\n", pos, ch);
         int change=ch-s[pos-1];
         s[pos-1]=ch;
         update(pos,change*hash[pos-1],0);
         update(len-pos+1,change*hash[len-pos],1);
         s[pos-1]=ch;
     }
+    fclose(f);
 }
 
 void Select(HuffmanTree HT, int end, int *s1, int *s2){
@@ -232,8 +246,7 @@ void HuffmanCoding(HuffmanTree HT, HuffmanCode *HC,int n){
     free(cd);
 }
 
-void PrintHuffmanCode(HuffmanCode htable,int* w,int n, char* s)
-{
+void PrintHuffmanCode(HuffmanCode htable,int* w,int n, char* s){
     printf("Huffman code:\n");
     for (int i=0; i<strlen(s); i++){
         if (s[i]=='A') printf("%s",htable[1]);
