@@ -29,5 +29,5 @@ Zhijin Zhang 519111910294
 
 
 Instructor: Maoying Wu (ricket@sjtu.edu.cn)
+TA: Xinyi Mou (xinyimou@sjtu.edu.cn)
 
-TA: Xinyi Mou (xinyimou@sjtu.edu.cn])
