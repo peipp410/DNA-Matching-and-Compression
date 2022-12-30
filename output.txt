@@ -1,0 +1,12 @@
+Found pattern string NO.1 in index 160
+Found pattern string NO.2 in index 178
+Found pattern string NO.2 in index 182
+Found pattern string NO.2 in index 208
+Found pattern string NO.1 in index 212
+Found pattern string NO.2 in index 348
+Found pattern string NO.2 in index 367
+Found pattern string NO.2 in index 382
+Found pattern string NO.2 in index 391
+Found pattern string NO.1 in index 416
+Found pattern string NO.2 in index 449
+Found pattern string NO.3 in index 450

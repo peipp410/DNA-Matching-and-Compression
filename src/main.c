@@ -1,5 +1,9 @@
 #include "proj.h"
 
+//void trie(char* seq);
+//void str_hash(char* s,char process);
+//void huffman(char* seq);
+
 char seq[N];
 int main(){
     FILE* f;
