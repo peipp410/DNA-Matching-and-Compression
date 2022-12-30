@@ -1,4 +1,4 @@
-# BI290_project
+# DNA matching and compressing
 
 Our project mainly implements algorithms concerning string matching and compression. To gain more information about the usage of our function, please turn to our manual. Thanks!
 
